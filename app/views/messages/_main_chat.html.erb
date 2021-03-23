@@ -1,7 +1,7 @@
 <div class="chat-header">
   <div class="left-header">
     <div class="header-title">
-      hogefuga
+      heager-title
     </div>
   </div>
   <div class="right-header">
@@ -12,37 +12,7 @@
 </div>
 
 <div class="messages">
-  <div class="message">
-    <div class="upper-message">
-      <div class="message-user">
-      Tom
-    </div>
-    <div class="message-date">
-      2021/3/19(金曜日) 14:31:00
-    </div>
-    </div>
-    <div class="lower-message">
-      <div class="message-content">
-        おはよう
-      </div>
-    </div>
-  </div>
-
-  <div class="message">
-    <div class="upper-message">
-      <div class="message-user">
-      Tom
-    </div>
-    <div class="message-date">
-      2021/3/19(金曜日) 14:37:00
-    </div>
-    </div>
-    <div class="lower-message">
-      <div class="message-content">
-        こんにちは
-      </div>
-    </div>
-  </div>
+  <%= render partial: 'message', collection: @messages %>
 </div>
 
 <%= form_with model:[@room, @message], class: 'form', local: true do |f|  %>
